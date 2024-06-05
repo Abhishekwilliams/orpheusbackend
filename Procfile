@@ -1,1 +1,1 @@
-web: gunicorn orpheusbackend.wsgi
+web: gunicorn myproject.wsgi

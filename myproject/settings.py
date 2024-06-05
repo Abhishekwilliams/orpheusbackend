@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
-
+import os
 
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -36,7 +36,7 @@ SECRET_KEY = "django-insecure-0zcs@8f*g+v3@w8+c+%2@up1@aq59k71q*t+td=t%y7vkhk&+=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['myproject.railway.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -141,6 +141,8 @@ REST_FRAMEWORK = {
 
 STATIC_URL = "static/"
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
